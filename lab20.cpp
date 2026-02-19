@@ -1,4 +1,4 @@
-// [Missing Code 1] Include header file.
+#include "lab20.h"
   
 int main(){
 	srand(time(0));
@@ -9,6 +9,9 @@ int main(){
 	Unit hero("Hero",name);
 	
 	Equipment sword(0,8,4);
+	Equipment axes(0,16,-3);
+	Equipment shield(0,-1,7);
+	Equipment armor(25,-2,2);
 	// [Missing Code 2]  Create Equipment axes, shield and armor here
 
 	
@@ -17,6 +20,12 @@ int main(){
 	cout << " [1] Sword \n [2] Axes \n [3] Shield \n [4] Armor \n";
 	cout << "Please selet your equipment: ";
 	cin >> eq;
+	switch(eq){
+	    case '1': hero.equip(&sword);break;
+	    case '2': hero.equip(&axes);break;
+	    case '3': hero.equip(&shield);break;
+	    case '4': hero.equip(&armor);break;
+	}
 	// [Missing Code 3] Equip a selected equipment to the hero. 
 
 	
@@ -57,6 +66,12 @@ int main(){
 			cout << " [1] Sword \n [2] Axes \n [3] Shield \n [4] Armor \n";
 			cout << "Please select your equipment: ";
 			cin >> eq;
+			switch(eq){
+	            case '1': hero.equip(&sword);break;
+	            case '2': hero.equip(&axes);break;
+	            case '3': hero.equip(&shield);break;
+	            case '4': hero.equip(&armor);break;
+	}
 			// [Missing Code 3] Equip a selected equipment to the hero.
 
 			
